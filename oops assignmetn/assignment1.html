@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+<body>
+    <script>
+        // Assignment 1 
+
+
+        
+        // let stu =  {
+        //     name:"ankit",
+        //     age : 5,
+
+        //     setage:function(newage){
+        //         this.age = newage
+        //     },
+        //     info:function(){
+        //         console.log(`${this.name} (${this.age})`);
+        //     }
+        // }
+        // stu.setage(3);
+        // stu.info();
+
+
+
+        // Assignment 2 
+        // function counter(){
+        //     this.count = 0;
+        // }
+
+        
+        // counter.prototype.inc = function(){
+        //     this.count++;
+        // }
+        // counter.prototype.value = function(){
+        //     console.log(this.count);
+        // }
+        // let counter1 = new counter();
+        // counter1.inc();
+        // counter1.inc();
+        // counter1.inc();
+        // counter1.inc();
+        // counter1.inc();
+        // counter1.value();
+
+
+        //Assignment 4
+        // let base  = {
+        //     title:"title",
+        //     describe: function(){
+        //         return(this.title);
+        //     }
+        // }
+
+        // let child = Object.create(base);
+        // child.title = "My Note";
+        // console.log(child.describe());
+
+        //Assignment 5 
+        // let p = "helldss";
+        // let w = new String("hello");
+        // console.log(typeof(p));
+        // console.log(typeof(w));
+
+        
+        // String.prototype.lastchar = function(str){
+        //     return str[str.length-1];
+        // }
+
+        // console.log(String.prototype.lastchar(p));
+        // console.log(String.prototype.lastchar(w));
+
+
+        // Assignment 6
+        let grand = {
+            g:"grand"
+        };
+        let parent = {
+            p:"parent"
+            
+        };
+        let child = {
+            c:"child"
+            
+        };
+        parent.__proto__ = grand;
+        child.__proto__ = parent;
+        console.log(child.g);
+        console.log(child.p);
+        console.log(child.c);
+        parent.color = "blue" ;
+        child.color = "red";
+
+        console.log(parent.color);
+        console.log(child.color);
+    </script>
+</body>
+</html>

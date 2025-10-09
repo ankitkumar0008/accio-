@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>activity 1 DOM Practice</title>
+  <style>
+    .title { font-weight: 700; }
+    .box   { padding: 8px; border: 1px solid #ddd; margin: 6px 0; }
+    .blue  { background:#e6f0ff; }
+    .red   { background:#ffe6e6; }
+    .hidden{ display:none; }
+    .rounded { border-radius: 8px; }
+    .highlight{ outline: 2px dashed orange; }
+  </style>
+</head>
+<body>
+  <div id="main" class="box blue">
+    <h1 class="title">Welcome</h1>
+    <p id="info">This is a paragraph.</p>
+    <button id="action">Click me</button>
+  </div>
+
+  <div id="playground" class="box">
+    <h2>Playground</h2>
+    <ul id="list">
+      <li class="item">Alpha</li>
+      <li class="item">Beta</li>
+    </ul>
+    <div id="output"></div>
+  </div>
+
+  <!-- Your scripts go here -->
+  <script>
+    // write code per task below
+    //task 1
+    // let main = document.getElementById('main');
+    // let title = document.getElementsByClassName('title');
+    // let p = document.getElementsByTagName('p');
+    // let item  = document.querySelector('.item')
+    // let items = document.querySelectorAll('.item');
+
+    // console.log(main);
+    // console.log(title);
+    // console.log(p);
+    // console.log(item);
+    // console.log(items);
+    
+    // task 2
+    // let main = document.getElementById('main');
+    // console.log(main.childNodes.length);
+    // console.log(main.children.length);
+    // console.log(main.firstChild);
+    // console.log(main.firstElementChild);
+    // console.log(main.lastChild);
+    // console.log(main.lastElementChild);
+
+    //task 3
+    // let p = document.getElementById('info');
+    // p.textContent="<b>Safe?</b>";
+    // p.innerHTML = "<b>Safe?</b>";
+
+
+    //task 4 
+    //     Create a new paragraph with text:
+    // `"Added by createElement + appendChild"`
+    // Append it to `#playground`.
+
+    // let playground = document.getElementById('playground');
+    // let  p = document.createElement('p');
+    // p.innerText = "Added by createElement + appendChild";
+    // playground.appendChild(p);
+    
+
+    // task 5 
+    //     Add a button (create via JS) labeled **"Remove Last"** under the `<ul id="list">`.
+    // On click, remove the **last** `<li>` if it exists. If none exists, write `"Nothing to remove"` in `#output`.
+
+    // task 7 
+    // Add this HTML just above #playground:
+    //<img id="hero" src="https://via.placeholder.com/120x60?text=A" alt="Image A">
+    // <button id="swap">Swap Image</button>
+
+    // let img = document.createElement('img');
+    // let reference = document.getElementById('playground');
+    // img.setAttribute('id','hero');
+    // img.setAttribute('src',"https://i.pinimg.com/736x/ae/18/48/ae1848e0d5b5a9c8801fd01ce775f687.jpg");
+    // img.setAttribute('alt','Image A');
+    // let button = document.createElement('button');
+    // button.setAttribute('id','swap');
+    // button.innerText = "Swap Image";
+    
+    // document.body.insertBefore(img,reference);
+    // document.body.insertBefore(button,reference);
+
+    // button.addEventListener('click',()=>{
+    //     if(img.getAttribute('src') == "https://i.pinimg.com/736x/ae/18/48/ae1848e0d5b5a9c8801fd01ce775f687.jpg"){
+    //         img.setAttribute('src','https://i.pinimg.com/1200x/68/57/ef/6857efd2bc49490975f8dfded88c86d0.jpg')
+    //     }else{
+    //         img.setAttribute('src','https://i.pinimg.com/736x/ae/18/48/ae1848e0d5b5a9c8801fd01ce775f687.jpg')
+    //     }
+    // })
+
+    // task 8 
+     
+  </script>
+</body>
+</html>

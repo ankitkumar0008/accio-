@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        svg{
+            width:200px;
+            height: 200px;
+        }
+        polygon{
+            fill:gold;
+            stroke: black;
+            stroke-width: 2;
+            transition: transform 0.3s ease;
+            transform-origin: 50% 50%;
+        }
+        polygon:hover{
+            transform: scale(1.25) translateX(20px);
+        }
+    </style>
+</head>
+<body>
+    
+  <!-- Normal star with hover effect -->
+  <svg>
+    <polygon points="50,15 61,35 82,35 66,50 72,71 50,60 28,71 34,50 18,35 39,35" />
+  </svg>
+
+  <!-- Always spinning star -->
+  <svg>
+    <polygon class="spin" points="50,15 61,35 82,35 66,50 72,71 50,60 28,71 34,50 18,35 39,35"/>
+  </svg>
+
+</body>
+</html>

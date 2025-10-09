@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "add-text">Add plain text</button>
+    <button id = "add-html">Add html content</button>
+    <div id = "output"></div>
+    <script>
+        let addtext = document.getElementById("add-text");
+        let addhtml = document.getElementById("add-html");
+        let output = document.getElementById("output");
+        let para = null;
+        addtext.addEventListener('click',()=>{
+            para = document.createElement('p');
+            para.textContent = "this is a paragraph";
+            output.appendChild(para);
+        })
+        addhtml.addEventListener('click',()=>{
+            para = document.createElement('p');
+            para.innerHTML = "this is <i> sfhs </i>";
+            output.appendChild(para);
+        })
+    </script>
+</body>
+</html>

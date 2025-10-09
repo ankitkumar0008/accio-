@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h2>My Dom Playground!</h2>
+      <button id="add">Add Paragraph</button>
+      <button id="remove">Remove paragraph</button>
+    </div>
+    <script>
+    //   let addbtn = document.getElementById("add");
+    //   let removebtn = document.getElementById("remove");
+    //   let newcont = document.getElementById("container");      
+    //   const addedparas=[];
+    //   addbtn.addEventListener("click", () => {
+    //     para = document.createElement("p");
+    //     para.innerHTML = "this is <i> sfhs </i>";
+    //     document.body.appendChild(para);
+    //     addedparas.push(para);
+    //   });
+    //   removebtn.addEventListener("click", () => {
+    //     const lastpara = addedparas.pop();
+    //     if(lastpara){
+    //         document.body.removeChild(lastpara);
+    //     } 
+    //   });
+
+
+
+    let para = document.createElement('p');
+para.innerHTML = "This is a <i>paragraph</i> using inner HTML";
+
+
+let btn = document.getElementById("add");
+
+btn.addEventListener('click', () => {
+    document.body.appendChild(para);
+});
+
+let btn2 = document.getElementById("remove");
+
+btn2.addEventListener('click', () => {
+    document.body.removeChild(para);
+});
+
+let container = document.getElementById("container");
+let addbtn = document.getElementById("add");
+let removebtn = document.getElementById("remove");
+
+let newPara = null;
+
+addbtn.addEventListener('click', () => {
+    newPara = document.createElement('p');
+    newPara.textContent = "This is a paragraph!";
+    container.appendChild(newPara);
+});
+
+removebtn.addEventListener('click', () => {
+    if (newPara) {
+        container.removeChild(newPara);
+        newPara = null;
+    }
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 
+ className
+
+ classlist
+
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name & Class list</title>
+</head>
+<body>
+
+    <div id="unique" class="box shadow green">Container</div>
+
+    <script>
+        let unique = document.getElementById("unique");
+        unique.classname = "c1 c2";
+        console.log(unique.classname);
+        //add
+        unique.classList.add(box);
+        // remove
+        unique.classList.remove("shadow");
+        // toggle
+        unique.classList.toggle("shadow");
+        //conatains
+        let hasshadow = unique.classList.contains("shadow");
+        console.log(hasshadow);
+        //replace
+        unique.classList.replace("shadow","box-shadow")
+    </script>
+</body>
+</html>

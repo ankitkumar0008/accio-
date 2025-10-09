@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity2</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your name" id = "name">
+    <br>
+    <input type="email" placeholder="Enter your email" id ="email">
+    <br>
+    <button type="submit" id = "submitdata">Enter Data</button>
+    <script>
+        let button = document.getElementById('submitdata');
+        let myData = {
+            name : "ankit",
+            age : 22
+        }
+        localStorage.setItem('myData',myData);
+    </script>
+</body>
+</html>

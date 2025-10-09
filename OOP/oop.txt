@@ -1,0 +1,50 @@
+Object Oriented Programming
+----------------------------------------
+Eeverything is object in JS => True
+
+object => set of properties 
+
+How to Create objects;:
+1. object literals
+2. constructor function
+3. classes
+
+1. object literal 
+-----------------------------------------
+object literal
+let user = {
+    firstName: "Rohit",
+    lastName: "Shah",
+    contact: "55555",
+
+    getName: function() {
+        console.log(this.firstName, this.lastName);
+    },
+}
+
+
+
+2. constructor function 
+------------------------------------------
+function User(firstName, lastName, contact) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.contact = contact;
+}
+
+let user1 = new User("Rohit", "Shah", "5555555");
+let user2 = new User("Jenil", "Gupta", "8989999");
+
+3. classes
+------------------------------------------
+class User {
+    constructor(firstName, lastName, contact) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contact = contact;
+    }
+
+    getName() {
+        console.log(this.firstName, this.lastName);
+    }
+}

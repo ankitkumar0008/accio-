@@ -1,0 +1,33 @@
+<!-- create element
+  appendchild
+  remove child
+  text content
+  innerhtml
+  add event listener
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to my app!</h1>
+    <button id = "btn">Click me !!!</button>
+    <script>
+        let para = document.createElement('p');
+        // console.log(para);
+        // para.textContent = "this is a paragraph";
+        para.innerHTML = "this is <i> sfhs </i>";
+        document.body.appendChild(para);
+        document.body.removeChild(para);
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click',()=>{
+            console.log("button clicked!!")
+        })
+    </script>
+</body>
+</html>

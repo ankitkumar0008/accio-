@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "mybox" class = "box blue shadow">I'm a box!</div>
+    <button id = "add"> Add "highlight"</button>
+    <button id = "remove"> remove "blue"</button>
+    <button id = "toggle"> toggle "rounded"</button>
+    <button id = "check"> check "shadow"</button>
+    
+    <script>
+        let div = document.getElementById("mybox");
+        let add = document.getElementById("add");
+        let remove = document.getElementById("remove");
+        let toggle = document.getElementById("toggle");
+        let check = document.getElementById("check");
+
+        let message = document.createElement("p");
+    document.body.appendChild(message);
+
+        add.addEventListener('click',()=>{
+            div.classList.add("highlight");
+            message.innerHTML = '"highlight" is added';
+        });
+        remove.addEventListener('click',()=>{
+            div.classList.remove("blue");
+            message.innerHTML = '"blue" is removed';
+        });
+        toggle.addEventListener('click',()=>{
+            
+            div.classList.toggle("rounded");
+            message.innerHTML = '"rounded" toggled';
+        });
+        check.addEventListener('click',()=>{
+            let check = div.classList.contains("shadow");
+            if(check){
+            message.innerHTML = '"shadow" exists';
+            }
+            else{
+            message.innerHTML = '"shadow" does not exist';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- Activity 5: Search Filter
+    *To Do* -> Create a search bar that filters a list of items in real-time as the user types.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Filter</title>
+    <style>
+        body{
+            background-color: black;
+            color: azure;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Search Filter</h1>
+    <input type="text" id="searchBar" placeholder="Search items" />
+    <ul id="itemList">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Banana</li>
+      <li>Strawberry</li>
+      <li>Blueberry</li>
+    </ul>
+
+    <script>
+      let searchBar = document.getElementById("searchBar");
+      let itemList = document.getElementById("itemList");
+      let items = itemList.querySelectorAll("li");
+
+      // input event
+      searchBar.addEventListener("input", () => {
+        let query = searchBar.value.toLowerCase();
+        items.forEach((item) => {
+          if (item.textContent.toLowerCase().includes(query)) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
