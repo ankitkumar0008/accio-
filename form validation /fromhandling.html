@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form id="myForm">
+      <!-- full name -->
+      <label for="fname">Full Name</label>
+      <input type="text" name="fname" id="fname" />
+      <!-- email -->
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" />
+      <!-- password -->
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <!-- confirm password -->
+      <label for="cpassword">confirm password</label>
+      <input type="password" name="cpassword" id="cpassword" />
+      <!-- age -->
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" />
+      <!-- country -->
+      <label for="country">Country</label>
+      <select name="country" id="country">
+        <option value="">Select Option</option>
+        <option value="India">India</option>
+        <option value="Nepal">Nepal</option>
+        <option value="SriLanka">SriLanka</option>
+        <option value="Bhutan">Bhutan</option>
+      </select>
+      <!-- terms -->
+      <input type="checkbox" name="checkbox" id="checkbox" />
+      <label for="checkbox">I agree to terms and conditons.</label>
+      <!-- submit button -->
+      <button id="submit">Submit</button>
+    </form>
+    <p id="error-msg" style="color: red"></p>
+
+    <!-- error paragraph -->
+
+    <script>
+      let form = document.getElementById("myForm");
+      let fullname = document.getElementById("fname");
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+      let cpassword = document.getElementById("cpassword");
+      let age = document.getElementById("age");
+      let country = document.getElementById("country");
+      let checkbox = document.getElementById("checkbox");
+      let submit = document.getElementById("submit");
+      let errorMsg = document.getElementById("error-msg");
+
+      form.addEventListener("submit", (e) => {
+        let isValid = true;
+        errorMsg.textContent = "";
+
+        if (
+          fullname.value.trim() === "" ||
+          email.value.trim() === "" ||
+          password.value.trim() === "" ||
+          age.value.trim() === "" ||
+          cpassword.value.trim()===""
+        ) {
+          errorMsg.textContent = "Please fill in all the required details";
+          isValid = false;
+        }
+
+        // 1️⃣ Empty check for all important fields
+        // 2️⃣ Basic email check
+        else if (!email.value.includes("@") || !email.value.includes(".")) {
+          errorMsg.textContent = "You entered invalid email!";
+          isValid = false;
+        }
+        // 3️⃣ Password match check
+        else if (password.value.length < 6) {
+          errorMsg.textContent = "Password length must be at least 6!";
+          isValid = false;
+        }
+        // 4️⃣ Password strength check (without regex)
+        else if (cpassword.value.trim() != password.value.trim()) {
+          errorMsg.textContent = "passwords doesn't match";
+          isValid = false;
+        }
+        // 5️⃣ Age check
+        else if (age.value.trim() <= 0) {
+          errorMsg.textContent = "enter valid email";
+          isValid = false;
+        }
+        // 6️⃣ Dropdown (Country) check
+        else if (country.value.trim() === "") {
+          errorMsg.textContent = "Choose a country";
+          isValid = false;
+        }
+        // 7️⃣ Checkbox (Terms)
+        else if (!checkbox.checked) {
+          errorMsg.textContent = "tick the checkbox";
+          isValid = false;
+        }
+        if (isValid) {
+          alert("Form submitted successfully!");
+        } else {
+          e.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

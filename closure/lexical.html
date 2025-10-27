@@ -23,15 +23,13 @@
         let greenyellow = document.getElementById("greenyellow");
         let item = document.getElementById("item");
         function changecolor(color){
-            item.style.backgroundColor = color;
+            return function(){
+                item.style.backgroundColor = color;
+            }
+            
         }
-        orange.addEventListener("click", () => {
-            changecolor("orange");
-        })
-
-        greenyellow.addEventListener("click", () => {
-            changecolor("greenyellow");
-        })
+        orange.addEventListener("click", changecolor("orange"))
+        greenyellow.addEventListener("click", changecolor("greenyellow"))
     </script>
 </body>
 </html>
