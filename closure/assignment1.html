@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aqua;
+            margin: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu"></ul>
+    <div class="container"></div>
+    <button id = "blue">blue</button>
+    <button id  = orange>orange</button>
+<script>
+const items = ["Home", "About", "Contact"];
+const ul = document.getElementById("menu");
+const blue = document.querySelector('#blue');
+const orange = document.querySelector('#orange');
+let div = document.querySelector('.container');
+
+items.forEach((item, index) => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  li.addEventListener("click", () => {
+    alert(`You clicked ${item} (index: ${index})`);
+  });
+  ul.appendChild(li);
+});
+
+blue.addEventListener('click',()=>{
+    div.style.backgroundColor = "blue";
+});
+orange.addEventListener('click',()=>{
+    div.style.backgroundColor = "orange";
+});
+
+function changecolor(name){
+
+}
+</script>
+
+</body>
+</html>
