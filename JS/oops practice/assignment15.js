@@ -1,12 +1,13 @@
 // E3: UserAuth
 class UserAuth {
   // TODO: #passwordHash = ""
-  #passwordHash = 1234;
+  #passwordHash = "";
+
   setPassword(Plain){
-    this.pin = Plain;
+    this.#passwordHash = Plain.split('').reverse().join('');
   }
   checkPassword(Plain){
-    if(Plain == this.pin){
+    if(Plain.split('').reverse().join('') == this.#passwordHash){
         console.log("correct pin");
     }else{
         console.log("incorrect pin");
@@ -20,5 +21,5 @@ class UserAuth {
 
 // TODO: demo: set, check right/wrong; keep commented line showing private access is blocked
 let lock = new UserAuth();
-lock.setPassword(3443);
-lock.checkPassword(3443);
+lock.setPassword("dfas");
+lock.checkPassword("dfas");
